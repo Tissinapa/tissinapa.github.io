@@ -1,15 +1,12 @@
-$primart-color: #444;
-$secondary-color: #eece1a;
-
-@mixin easeOut {
-    transition: all 0.8s ease-out;
-}
+@import 'config';
+@import 'menu';
 
 * {
     box-sizing: border-box;
 }
 
 body{
+    @include background;
     background: $primart-color;
     color: #fff;
     height: 100%;
