@@ -1,4 +1,4 @@
-$primart-color: #444;
+$primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/Lusikka.jpg);
@@ -22,13 +22,20 @@ $background-opacity: 0.5;
                 width: 100%;
                 height: 100%;
                 z-index: -1;
-                background: rgba($primart-color,$background-opacity);
+                background: rgba($primary-color,$background-opacity);
             }
         }
     }
     
 }
-
+//set text color
+@function set-text-color($color){
+    @if(lightness($color) > 40 ){
+        @return #000;
+    }@else{
+        @return #fff;
+    }
+}
 // media query mixins
 
 @mixin mediaSm {
